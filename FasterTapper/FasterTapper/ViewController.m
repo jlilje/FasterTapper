@@ -8,11 +8,16 @@
 
 #import "ViewController.h"
 
+//IBOutlet UILabel *scoreLabel;
+
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
+int tapCounter = 0;
+int score = 0;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,8 +29,9 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)tapButtonPressed:(id)sender {
-    _tapCounter++;
-    NSLog(@"tapCounter is %d", _tapCounter);
+    tapCounter++;
+    NSLog(@"tapCounter is %d", tapCounter);
+    _scoreLabel.text = [NSString stringWithFormat:@"Score = %d", tapCounter];
 }
 
 @end

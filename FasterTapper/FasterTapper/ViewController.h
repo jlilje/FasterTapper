@@ -14,9 +14,9 @@
 
 @interface ViewController : UIViewController
 
-@property int tapCounter;
-@property int score;
 @property(nonatomic, strong)NSTimer *timer;
+
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 
 @end
 
