@@ -23,5 +23,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)tapButtonPressed:(id)sender {
+    _tapCounter++;
+    NSLog(@"tapCounter is %d", _tapCounter);
+}
 
 @end

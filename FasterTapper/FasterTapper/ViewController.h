@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+// Variable for tap counter
+// Variable for timer
+// Variable for score
+
 @interface ViewController : UIViewController
 
+@property int tapCounter;
+@property int score;
+@property(nonatomic, strong)NSTimer *timer;
 
 @end
 
