@@ -18,12 +18,27 @@
 
 int tapCounter = 0;
 int score = 0;
+int timeLeft = 0;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    timeLeft = 60;
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                              target:self
+                                            selector:@selector(subtractTime)
+                                            userInfo:nil
+                                             repeats:YES];
 }
 
+
+- (void)subtractTime {
+    while (timeLeft > 0) {
+        timeLeft--;
+        _timerLabel.text = [NSString stringWithFormat:@"Time: %d", timeLeft];
+    }
+    
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

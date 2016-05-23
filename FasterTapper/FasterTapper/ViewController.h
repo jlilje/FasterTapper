@@ -17,6 +17,9 @@
 @property(nonatomic, strong)NSTimer *timer;
 
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timerLabel;
+
+- (void)subtractTime;
 
 @end
 
